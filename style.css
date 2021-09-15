@@ -69,9 +69,15 @@ html {
   }
 }
 
-@keyframes fade-in {
+@keyframes fade-in-medium {
   to {
-    opacity: 0.7;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes fade-in-full {
+  to {
+    color: rgba(255, 255, 255, 1);
   }
 }
 
@@ -211,19 +217,18 @@ html {
 .main-hero__text {
   max-width: 525px;
   margin-bottom: 5vh;
-  animation: 1s slide-right 1.5s forwards;
-  transform: translateX(-150%);
-  opacity: 0.6;
+  animation: 1s fade-in-medium 1.5s forwards;
+  color: rgba(0, 0, 0, 0);
 }
 
 .main-hero__text--highlight {
-  color: white;
-  opacity: 1;
+  animation: 1s fade-in-full 1.5s forwards;
+  color: rgba(255, 255, 255, 0);
 }
 
 .main-btn {
   /* height: 7vh; */
-  height: calc(20px + 5vh);
+  height: calc(20px + 4vh);
   /* width: 40vw; */
   width: calc(80px + 20vw);
   max-width: 220px;
